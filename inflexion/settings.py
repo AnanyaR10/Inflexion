@@ -141,3 +141,12 @@ MEDIA_URL = '/media/'
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#smtp configuration
+
+EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST='smtp.gmail.com'
+EMAIL_PORT=465
+EMAIL_USE_TLS=True
+EMAIL_HOST_USER='intern_IH_1@inflexionpointbd.com'
+EMAIL_HOST_PASSWORD='3auNTp4Ri.gJ'
