@@ -1,0 +1,10 @@
+{%extends 'base.html' %}
+
+
+
+{% block content %}
+<h1>logged in</h1>
+<a class="btn btn-primary btn-sm btn-block" href={% url 'create_orders' %}>Create Orders</a><br>
+<a class="btn btn-primary btn-sm btn-block" href={% url 'log_out' %}>Log Out</a><br>
+
+{% endblock %}

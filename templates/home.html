@@ -7,13 +7,6 @@
 
 <h1>Home Page</h1>
 
-{% for customer in customers%}
-
-<tr>
-    <th>{{customer.name}}</th>
-    <th>{{customer.phone}}</th>
-</tr>
-{% endfor %}
 <h1>hello {{request.user}}</h1>
 <a class="btn btn-primary btn-sm btn-block" href={% url 'log_out' %}>Log out</a>
 

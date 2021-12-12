@@ -1,7 +1,15 @@
 {%extends 'base.html' %}
 
 {% block content %}
-<h1>user page</h1>
+<h1>Hello {{request.user}}  {{phone}}</h1>
 
 
+<a class="btn btn-primary btn-sm btn-block" href={% url 'log_out' %}>Log Out</a><br>
+
+{% for img in images %}  
+      <tr>
+        <td>{{img.name}}</td>
+		<td><img src="{{ BASIC_DIR }}{{img.pic.url}}" width="120"/></td>
+      </tr>
+	  {% endfor %} 
 {% endblock %}

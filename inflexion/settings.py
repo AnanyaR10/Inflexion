@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-fpvyl_y!*^^!(op&_h75f=u%w&%%&hkk)+bmt(7)09lyfv0l&1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -76,10 +76,20 @@ WSGI_APPLICATION = 'inflexion.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': str(BASE_DIR / 'db.sqlite3'),
+    #'default': {
+     #   'ENGINE': 'django.db.backends.sqlite3',
+      #  'NAME': str(BASE_DIR / 'db.sqlite3'),
+    #}
+        'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'inflexion',
+        'USER': 'ananya',
+        'PASSWORD': 'ananya1234',
+        'HOST': 'localhost',
+        'PORT': '',
     }
+
+
 }
 
 
@@ -100,6 +110,8 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+#AUTH_USER_MODEL = 'accounts.Customer'
 
 
 # Internationalization
@@ -123,5 +135,9 @@ STATIC_URL = '/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
